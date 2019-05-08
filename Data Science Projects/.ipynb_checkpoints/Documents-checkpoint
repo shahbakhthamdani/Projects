@@ -1,0 +1,555 @@
+,Film,Duration,Genre,Year,Winner,Biopic
+0,Wings,144,"Action,Drama,Romance",1927-01-01,1,0
+1,The Racket,84,"Crime,Drama,Film-Noir",1928-01-01,0,0
+2,7th Heaven,110,"Drama,Romance",1927-01-01,0,0
+3,The Broadway Melody,100,"Drama,Musical,Romance",1929-01-01,1,0
+4,Alibi,91,Crime,1929-01-01,0,0
+5,The Hollywood Revue of 1929,130,Musical,1929-01-01,0,0
+6,In Old Arizona,95,"Romance,Western",1928-01-01,0,0
+7,The Patriot,113,Drama,1928-01-01,0,0
+8,All Quiet on the Western Front,136,"Drama,War",1930-01-01,1,0
+9,The Big House,87,"Crime,Drama,Thriller",1930-01-01,0,0
+10,Disraeli,90,"Biography,Drama,History",1929-01-01,0,1
+11,The Divorcee,84,"Drama,Romance",1930-01-01,0,0
+12,The Love Parade,107,"Comedy,Musical,Romance",1929-01-01,0,0
+13,Cimarron,123,"Drama,Western",1931-01-01,1,0
+14,East Lynne,102,Drama,1931-01-01,0,0
+15,The Front Page,101,Comedy,1931-01-01,0,0
+16,Skippy,85,"Comedy,Drama,Family",1931-01-01,0,0
+17,Trader Horn,122,"Action,Adventure,Drama",1931-01-01,0,0
+18,Grand Hotel,112,"Drama,Romance",1932-01-01,1,0
+19,Arrowsmith,108,Drama,1931-01-01,0,0
+20,Bad Girl,90,"Drama,Romance",1931-01-01,0,0
+21,The Champ,86,"Drama,Sport",1931-01-01,0,0
+22,Five Star Final,89,"Crime,Drama",1931-01-01,0,0
+23,One Hour with You,80,"Comedy,Musical,Romance",1932-01-01,0,0
+24,Shanghai Express,82,"Adventure,Drama,Romance",1932-01-01,0,0
+25,The Smiling Lieutenant,93,"Comedy,Musical,Romance",1931-01-01,0,0
+26,Cavalcade,112,"Drama,Romance,War",1933-01-01,1,0
+27,42nd Street,89,"Comedy,Musical,Romance",1933-01-01,0,0
+28,A Farewell to Arms,80,"Drama,Romance,War",1932-01-01,0,0
+29,I Am a Fugitive from a Chain Gang,92,"Crime,Drama,Film-Noir",1932-01-01,0,0
+30,Lady for a Day,96,"Comedy,Drama",1933-01-01,0,0
+31,Little Women,115,"Drama,Family,Romance",1933-01-01,0,0
+32,The Private Life of Henry VIII.,97,"Biography,Comedy,Drama",1933-01-01,0,1
+33,She Done Him Wrong,66,"Comedy,Drama,History",1933-01-01,0,0
+34,Smilin' Through,98,"Drama,Romance",1932-01-01,0,0
+35,State Fair,99,"Comedy,Drama,Romance",1933-01-01,0,0
+36,It Happened One Night,105,"Comedy,Romance",1934-01-01,1,0
+37,The Barretts of Wimpole Street,109,"Biography,Drama,Romance",1934-01-01,0,1
+38,Cleopatra,100,"Biography,Drama,History",1934-01-01,0,1
+39,Flirtation Walk,97,"Musical,Romance",1934-01-01,0,0
+40,The Gay Divorcee,107,"Comedy,Musical,Romance",1934-01-01,0,0
+41,Here Comes the Navy,87,"Comedy,Drama,Romance",1934-01-01,0,0
+42,The House of Rothschild,88,"Biography,Drama,History",1934-01-01,0,1
+43,Imitation of Life,111,"Drama,Romance",1934-01-01,0,0
+44,One Night of Love,84,"Music,Romance",1934-01-01,0,0
+45,The Thin Man,91,"Comedy,Crime,Mystery",1934-01-01,0,0
+46,Viva Villa!,115,"Biography,Western",1934-01-01,0,1
+47,The White Parade,80,Drama,1934-01-01,0,0
+48,Mutiny on the Bounty,132,"Adventure,Biography,Drama",1935-01-01,1,1
+49,Alice Adams,99,"Comedy,Drama,Romance",1935-01-01,0,0
+50,Broadway Melody of 1936,101,"Musical,Romance",1935-01-01,0,0
+51,Captain Blood,119,"Action,Adventure",1935-01-01,0,0
+52,David Copperfield,130,"Adventure,Drama,Romance",1935-01-01,0,0
+53,The Informer,83,Drama,1929-01-01,0,0
+54,The Lives of a Bengal Lancer,109,"Adventure,Drama",1935-01-01,0,0
+55,A Midsummer Night's Dream,133,"Comedy,Fantasy,Romance",1935-01-01,0,0
+56,Les Misérables,108,"Drama,History,Romance",1935-01-01,0,0
+57,Naughty Marietta,105,"Drama,Musical,Romance",1935-01-01,0,0
+58,Ruggles of Red Gap,90,"Comedy,Romance",1935-01-01,0,0
+59,Top Hat,101,"Comedy,Musical,Romance",1935-01-01,0,0
+60,The Great Ziegfeld,176,"Biography,Drama,Musical",1936-01-01,1,1
+61,Anthony Adverse,141,"Adventure,Drama,Romance",1936-01-01,0,0
+62,Dodsworth,101,"Drama,Romance",1936-01-01,0,0
+63,Libeled Lady,98,"Comedy,Romance",1936-01-01,0,0
+64,Mr. Deeds Goes to Town,115,"Comedy,Drama,Romance",1936-01-01,0,0
+65,Romeo and Juliet,125,"Drama,Romance",1936-01-01,0,0
+66,San Francisco,115,"Drama,Musical,Romance",1936-01-01,0,0
+67,The Story of Louis Pasteur,86,"Biography,Drama,History",1936-01-01,0,1
+68,A Tale of Two Cities,128,"Drama,History,Romance",1935-01-01,0,0
+69,Three Smart Girls,84,"Comedy,Musical,Romance",1936-01-01,0,0
+70,The Life of Emile Zola,116,"Biography,Drama",1937-01-01,1,1
+71,The Awful Truth,90,"Comedy,Romance",1937-01-01,0,0
+72,Captains Courageous,117,"Adventure,Drama,Family",1937-01-01,0,0
+73,Dead End,93,"Crime,Drama,Film-Noir",1937-01-01,0,0
+74,The Good Earth,138,"Drama,Romance",1937-01-01,0,0
+75,In Old Chicago,95,"Action,Drama,Musical",1938-01-01,0,0
+76,Lost Horizon,132,"Adventure,Drama,Fantasy",1937-01-01,0,0
+77,One Hundred Men and a Girl,84,"Comedy,Drama,Music",1937-01-01,0,0
+78,Stage Door,92,"Comedy,Drama",1937-01-01,0,0
+79,A Star Is Born,111,Drama,1937-01-01,0,0
+80,You Can't Take It with You,126,"Comedy,Drama,Romance",1938-01-01,1,0
+81,The Adventures of Robin Hood,102,"Action,Adventure,Romance",1938-01-01,0,0
+82,Alexander's Ragtime Band,106,"Drama,Musical,Romance",1938-01-01,0,0
+83,Boys Town,96,"Biography,Drama",1938-01-01,0,1
+84,The Citadel,110,Drama,1938-01-01,0,0
+85,Four Daughters,90,"Drama,Music,Romance",1938-01-01,0,0
+86,Grand Illusion,95,"Drama,Romance",1985-01-01,0,0
+87,Jezebel,104,"Drama,Romance",1938-01-01,0,0
+88,Pygmalion,95,Comedy,1937-01-01,0,0
+89,Test Pilot,119,"Drama,Romance",1938-01-01,0,0
+90,Gone with the Wind,238,"Drama,History,Romance",1939-01-01,1,0
+91,Dark Victory,104,"Drama,Romance",1939-01-01,0,0
+92,"Goodbye, Mr. Chips",114,"Drama,Romance",1939-01-01,0,0
+93,Love Affair,68,"Drama,Romance",1932-01-01,0,0
+94,Mr. Smith Goes to Washington,129,"Comedy,Drama",1939-01-01,0,0
+95,Ninotchka,110,"Comedy,Romance",1939-01-01,0,0
+96,Of Mice and Men,106,Drama,1939-01-01,0,0
+97,Stagecoach,96,"Adventure,Drama,Western",1939-01-01,0,0
+98,The Wizard of Oz,102,"Adventure,Family,Fantasy",1939-01-01,0,0
+99,Wuthering Heights,104,"Drama,Romance",1939-01-01,0,0
+100,Rebecca,130,"Drama,Mystery,Romance",1940-01-01,1,0
+101,"All This, and Heaven Too",141,"Drama,Romance",1940-01-01,0,0
+102,Foreign Correspondent,120,"Action,Romance,Thriller",1940-01-01,0,0
+103,The Grapes of Wrath,129,"Drama,History",1940-01-01,0,0
+104,The Great Dictator,125,"Comedy,Drama,War",1940-01-01,0,0
+105,Kitty Foyle,108,"Drama,Romance",1940-01-01,0,0
+106,The Letter,65,Drama,1929-01-01,0,0
+107,The Long Voyage Home,105,"Drama,War",1940-01-01,0,0
+108,Our Town,90,"Drama,Romance",1940-01-01,0,0
+109,The Philadelphia Story,112,"Comedy,Romance",1940-01-01,0,0
+110,How Green Was My Valley,118,"Drama,Family",1941-01-01,1,0
+111,Blossoms in the Dust,99,"Biography,Drama,Romance",1941-01-01,0,1
+112,Citizen Kane,119,"Drama,Mystery",1941-01-01,0,0
+113,Here Comes Mr. Jordan,94,"Comedy,Fantasy,Romance",1941-01-01,0,0
+114,Hold Back the Dawn,116,"Drama,Romance",1941-01-01,0,0
+115,The Little Foxes,116,"Drama,Romance",1941-01-01,0,0
+116,The Maltese Falcon,80,"Crime,Drama,Film-Noir",1931-01-01,0,0
+117,One Foot in Heaven,108,"Biography,Drama",1941-01-01,0,1
+118,Sergeant York,134,"Biography,Drama,History",1941-01-01,0,1
+119,Suspicion,99,"Mystery,Thriller",1941-01-01,0,0
+120,Mrs. Miniver,134,"Drama,Romance,War",1942-01-01,1,0
+121,The Invaders,62,Western,1929-01-01,0,0
+122,Kings Row,127,"Drama,Mystery,Romance",1942-01-01,0,0
+123,The Magnificent Ambersons,88,"Drama,Romance",1942-01-01,0,0
+124,The Pied Piper,87,"Drama,War",1942-01-01,0,0
+125,The Pride of the Yankees,128,"Biography,Drama,Romance",1942-01-01,0,1
+126,Random Harvest,126,"Drama,Romance",1942-01-01,0,0
+127,The Talk of the Town,118,"Comedy,Drama,Romance",1942-01-01,0,0
+128,Wake Island,88,"Action,Drama,War",1942-01-01,0,0
+129,Yankee Doodle Dandy,126,"Biography,Drama,Musical",1942-01-01,0,1
+130,Casablanca,102,"Drama,Romance,War",1942-01-01,1,0
+131,For Whom the Bell Tolls,170,"Adventure,Drama,History",1943-01-01,0,0
+132,Heaven Can Wait,112,"Comedy,Drama,Fantasy",1943-01-01,0,0
+133,The Human Comedy,117,"Comedy,Drama,Family",1943-01-01,0,0
+134,In Which We Serve,114,"Drama,War",1942-01-01,0,0
+135,Madame Curie,124,"Biography,Drama,Romance",1943-01-01,0,1
+136,The More the Merrier,104,"Comedy,Romance,War",1943-01-01,0,0
+137,The Ox-Bow Incident,75,"Drama,Western",1943-01-01,0,0
+138,The Song of Bernadette,156,"Biography,Drama",1943-01-01,0,1
+139,Watch on the Rhine,114,Drama,1943-01-01,0,0
+140,Going My Way,126,"Comedy,Drama,Music",1944-01-01,1,0
+141,Double Indemnity,107,"Crime,Drama,Film-Noir",1944-01-01,0,0
+142,Gaslight,84,Thriller,1940-01-01,0,0
+143,Since You Went Away,177,"Drama,Romance,War",1944-01-01,0,0
+144,Wilson,154,"Biography,Drama,History",1944-01-01,0,1
+145,The Lost Weekend,101,"Drama,Film-Noir",1945-01-01,1,0
+146,Anchors Aweigh,140,"Comedy,Fantasy,Music",1945-01-01,0,0
+147,The Bells of St. Mary's,126,Drama,1945-01-01,0,0
+148,Mildred Pierce,111,"Crime,Drama,Film-Noir",1945-01-01,0,0
+149,Spellbound,111,"Film-Noir,Mystery,Romance",1945-01-01,0,0
+150,The Best Years of Our Lives,170,"Drama,Romance,War",1946-01-01,1,0
+151,Henry V,137,"Biography,Drama,History",1944-01-01,0,1
+152,It's a Wonderful Life,130,"Drama,Family,Fantasy",1946-01-01,0,0
+153,The Razor's Edge,145,"Drama,Romance",1946-01-01,0,0
+154,The Yearling,128,"Drama,Family,Western",1946-01-01,0,0
+155,Gentleman's Agreement,118,"Drama,Romance",1947-01-01,1,0
+156,The Bishop's Wife,109,"Comedy,Drama,Fantasy",1947-01-01,0,0
+157,Crossfire,86,"Crime,Drama,Film-Noir",1947-01-01,0,0
+158,Great Expectations,118,"Adventure,Drama,Mystery",1946-01-01,0,0
+159,Miracle on 34th Street,96,"Comedy,Drama,Family",1947-01-01,0,0
+160,Hamlet,154,Drama,1948-01-01,1,0
+161,Johnny Belinda,102,Drama,1948-01-01,0,0
+162,The Red Shoes,134,"Drama,Music,Romance",1948-01-01,0,0
+163,The Snake Pit,108,"Drama,Mystery",1948-01-01,0,0
+164,The Treasure of the Sierra Madre,126,"Adventure,Drama,Western",1948-01-01,0,0
+165,All the King's Men,110,"Drama,Film-Noir",1949-01-01,1,0
+166,Battleground,118,"Action,Drama,History",1949-01-01,0,0
+167,The Heiress,115,"Drama,Romance",1949-01-01,0,0
+168,A Letter to Three Wives,103,"Drama,Romance",1949-01-01,0,0
+169,Twelve O'Clock High,132,"Drama,War",1949-01-01,0,0
+170,All About Eve,138,Drama,1950-01-01,1,0
+171,Born Yesterday,103,"Comedy,Drama,Romance",1950-01-01,0,0
+172,Father of the Bride,92,"Comedy,Romance",1950-01-01,0,0
+173,King Solomon's Mines,77,"Action,Adventure,Drama",1937-01-01,0,0
+174,Sunset Boulevard,110,"Drama,Film-Noir",1950-01-01,0,0
+175,An American in Paris,114,"Drama,Musical,Romance",1951-01-01,1,0
+176,Decision Before Dawn,119,"Drama,War",1951-01-01,0,0
+177,A Place in the Sun,122,"Drama,Romance",1951-01-01,0,0
+178,Quo Vadis,171,"Biography,Drama,History",1951-01-01,0,1
+179,A Streetcar Named Desire,122,Drama,1951-01-01,0,0
+180,The Greatest Show on Earth,152,"Drama,Family,Romance",1952-01-01,1,0
+181,High Noon,85,"Action,Drama,Thriller",1952-01-01,0,0
+182,Ivanhoe,106,"Adventure,Drama,History",1952-01-01,0,0
+183,Moulin Rouge,137,Drama,1928-01-01,0,0
+184,The Quiet Man,129,"Comedy,Drama,Romance",1952-01-01,0,0
+185,From Here to Eternity,118,"Drama,Romance,War",1953-01-01,1,0
+186,Julius Caesar,120,"Biography,Drama,History",1953-01-01,0,1
+187,The Robe,135,"Drama,History",1953-01-01,0,0
+188,Roman Holiday,118,"Comedy,Romance",1953-01-01,0,0
+189,Shane,118,"Drama,Western",1953-01-01,0,0
+190,On the Waterfront,108,"Crime,Drama,Thriller",1954-01-01,1,0
+191,The Caine Mutiny,124,"Drama,War",1954-01-01,0,0
+192,The Country Girl,104,"Drama,Music",1954-01-01,0,0
+193,Seven Brides for Seven Brothers,102,"Comedy,Drama,Musical",1954-01-01,0,0
+194,Three Coins in the Fountain,102,"Drama,Romance",1954-01-01,0,0
+195,Marty,90,"Drama,Romance",1955-01-01,1,0
+196,Love Is a Many-Splendored Thing,102,"Biography,Drama,Romance",1955-01-01,0,1
+197,Mister Roberts,123,"Comedy,Drama,War",1955-01-01,0,0
+198,Picnic,115,"Drama,Romance",1956-01-01,0,0
+199,The Rose Tattoo,117,"Comedy,Drama,Romance",1955-01-01,0,0
+200,Around the World in 80 Days,175,"Adventure,Comedy,Family",1956-01-01,1,0
+201,Friendly Persuasion,137,"Drama,Romance,War",1956-01-01,0,0
+202,Giant,201,"Drama,Western",1956-01-01,0,0
+203,The King and I,133,"Biography,Drama,Musical",1956-01-01,0,1
+204,The Ten Commandments,220,"Adventure,Drama",1956-01-01,0,0
+205,The Bridge on the River Kwai,161,"Adventure,Drama,War",1957-01-01,1,0
+206,12 Angry Men,96,Drama,1957-01-01,0,0
+207,Peyton Place,157,"Drama,Romance",1957-01-01,0,0
+208,Sayonara,147,"Drama,Romance",1957-01-01,0,0
+209,Witness for the Prosecution,116,"Crime,Drama,Mystery",1957-01-01,0,0
+210,Gigi,82,"Comedy,Romance",1949-01-01,1,0
+211,Auntie Mame,143,"Comedy,Drama,Romance",1958-01-01,0,0
+212,Cat on a Hot Tin Roof,108,Drama,1958-01-01,0,0
+213,The Defiant Ones,96,"Crime,Drama",1958-01-01,0,0
+214,Separate Tables,100,"Drama,Romance",1958-01-01,0,0
+215,Ben-Hur,212,"Adventure,Drama,History",1959-01-01,1,0
+216,Anatomy of a Murder,160,"Crime,Drama,Mystery",1959-01-01,0,0
+217,The Diary of Anne Frank,180,"Biography,Drama,Family",1959-01-01,0,1
+218,The Nun's Story,149,Drama,1959-01-01,0,0
+219,Room at the Top,117,"Drama,Romance",1959-01-01,0,0
+220,The Apartment,125,"Comedy,Drama,Romance",1960-01-01,1,0
+221,The Alamo,162,"Adventure,Drama,History",1960-01-01,0,0
+222,Elmer Gantry,146,Drama,1960-01-01,0,0
+223,Sons and Lovers,103,Drama,1960-01-01,0,0
+224,The Sundowners,83,Western,1950-01-01,0,0
+225,West Side Story,153,"Crime,Drama,Musical",1961-01-01,1,0
+226,Fanny,140,"Comedy,Drama",1932-01-01,0,0
+227,The Guns of Navarone,158,"Action,Adventure,Drama",1961-01-01,0,0
+228,The Hustler,134,"Drama,Sport",1961-01-01,0,0
+229,Judgment at Nuremberg,186,"Drama,War",1961-01-01,0,0
+230,Lawrence of Arabia,216,"Adventure,Biography,Drama",1962-01-01,1,1
+231,The Longest Day,178,"Action,Drama,History",1962-01-01,0,0
+232,The Music Man,151,"Comedy,Musical,Romance",1962-01-01,0,0
+233,To Kill a Mockingbird,129,"Crime,Drama",1962-01-01,0,0
+234,Tom Jones,128,"Adventure,Comedy,History",1963-01-01,1,0
+235,America America,174,Drama,1963-01-01,0,0
+236,How the West Was Won,164,Western,1962-01-01,0,0
+237,Lilies of the Field,94,Drama,1963-01-01,0,0
+238,My Fair Lady,170,"Drama,Family,Musical",1964-01-01,1,0
+239,Becket,148,"Biography,Drama,History",1964-01-01,0,1
+240,Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb,95,Comedy,1964-01-01,0,0
+241,Mary Poppins,139,"Comedy,Family,Fantasy",1964-01-01,0,0
+242,Zorba the Greek,142,"Comedy,Drama",1964-01-01,0,0
+243,The Sound of Music,172,"Biography,Drama,Family",1965-01-01,1,1
+244,Darling,80,Drama,1961-01-01,0,0
+245,Doctor Zhivago,197,"Drama,Romance,War",1965-01-01,0,0
+246,Ship of Fools,149,"Drama,Romance,War",1965-01-01,0,0
+247,A Thousand Clowns,118,"Comedy,Drama,Romance",1965-01-01,0,0
+248,A Man for All Seasons,120,"Biography,Drama,History",1966-01-01,1,1
+249,Alfie,114,"Comedy,Drama",1966-01-01,0,0
+250,The Russians Are Coming! The Russians Are Coming!,126,"Comedy,War",1966-01-01,0,0
+251,The Sand Pebbles,182,"Adventure,Drama,Romance",1966-01-01,0,0
+252,Who's Afraid of Virginia Woolf?,131,Drama,1966-01-01,0,0
+253,In the Heat of the Night,110,"Crime,Drama,Mystery",1967-01-01,1,0
+254,Bonnie and Clyde,111,"Action,Biography,Crime",1967-01-01,0,1
+255,Doctor Dolittle,152,"Adventure,Comedy,Family",1967-01-01,0,0
+256,The Graduate,106,"Comedy,Drama,Romance",1967-01-01,0,0
+257,Guess Who's Coming to Dinner,108,"Comedy,Drama",1967-01-01,0,0
+258,Oliver!,153,"Drama,Family,Musical",1968-01-01,1,0
+259,Funny Girl,151,"Biography,Comedy,Drama",1968-01-01,0,1
+260,The Lion in Winter,134,"Biography,Drama,History",1968-01-01,0,1
+261,"Rachel, Rachel",101,"Drama,Romance",1968-01-01,0,0
+262,Midnight Cowboy,113,Drama,1969-01-01,1,0
+263,Anne of the Thousand Days,145,"Biography,Drama,History",1969-01-01,0,1
+264,Butch Cassidy and the Sundance Kid,110,"Biography,Crime,Drama",1969-01-01,0,1
+265,"Hello, Dolly!",146,"Adventure,Comedy,Musical",1969-01-01,0,0
+266,Z,127,"Crime,Drama,History",1969-01-01,0,0
+267,Patton,172,"Biography,Drama,War",1970-01-01,1,1
+268,Airport,137,"Action,Drama,Thriller",1970-01-01,0,0
+269,Five Easy Pieces,98,Drama,1970-01-01,0,0
+270,Love Story,82,\N,1933-01-01,0,0
+271,MASH,116,"Comedy,Drama,War",1970-01-01,0,0
+272,The French Connection,104,"Action,Crime,Drama",1971-01-01,1,0
+273,A Clockwork Orange,136,"Crime,Drama,Sci-Fi",1971-01-01,0,0
+274,Fiddler on the Roof,181,"Drama,Family,Musical",1971-01-01,0,0
+275,The Last Picture Show,118,Drama,1971-01-01,0,0
+276,Nicholas and Alexandra,183,"Biography,Drama,History",1971-01-01,0,1
+277,The Godfather,175,"Crime,Drama",1972-01-01,1,0
+278,Cabaret,70,"Crime,Drama",1927-01-01,0,0
+279,Deliverance,109,"Adventure,Drama,Thriller",1972-01-01,0,0
+280,The Emigrants,191,"Drama,History",1971-01-01,0,0
+281,Sounder,105,"Drama,Family",1972-01-01,0,0
+282,The Sting,129,"Comedy,Crime,Drama",1973-01-01,1,0
+283,American Graffiti,110,"Comedy,Drama",1973-01-01,0,0
+284,Cries & Whispers,91,Drama,1972-01-01,0,0
+285,The Exorcist,122,Horror,1973-01-01,0,0
+286,A Touch of Class,106,"Comedy,Romance",1973-01-01,0,0
+287,The Godfather: Part II,202,"Crime,Drama",1974-01-01,1,0
+288,Chinatown,130,"Drama,Mystery,Thriller",1974-01-01,0,0
+289,The Conversation,113,"Drama,Mystery,Thriller",1974-01-01,0,0
+290,Lenny,111,"Biography,Drama",1974-01-01,0,1
+291,The Towering Inferno,165,"Action,Drama,Thriller",1974-01-01,0,0
+292,One Flew Over the Cuckoo's Nest,133,Drama,1975-01-01,1,0
+293,Barry Lyndon,185,"Adventure,Drama,History",1975-01-01,0,0
+294,Dog Day Afternoon,125,"Biography,Crime,Drama",1975-01-01,0,1
+295,Jaws,124,"Adventure,Drama,Thriller",1975-01-01,0,0
+296,Nashville,160,"Comedy,Drama,Music",1975-01-01,0,0
+297,Rocky,76,Drama,1948-01-01,1,0
+298,All the President's Men,138,"Biography,Drama,History",1976-01-01,0,1
+299,Bound for Glory,147,"Biography,Drama,Music",1976-01-01,0,1
+300,Network,121,Drama,1976-01-01,0,0
+301,Taxi Driver,133,"Musical,Romance",1954-01-01,0,0
+302,Annie Hall,93,"Comedy,Romance",1977-01-01,1,0
+303,The Goodbye Girl,111,"Comedy,Drama,Romance",1977-01-01,0,0
+304,Julia,88,Drama,1974-01-01,0,0
+305,Star Wars: Episode IV - A New Hope,121,"Action,Adventure,Fantasy",1977-01-01,0,0
+306,The Turning Point,108,"Drama,War",1945-01-01,0,0
+307,The Deer Hunter,183,"Drama,War",1978-01-01,1,0
+308,Coming Home,127,"Drama,Romance,War",1978-01-01,0,0
+309,Midnight Express,121,"Biography,Crime,Drama",1978-01-01,0,1
+310,An Unmarried Woman,124,"Comedy,Drama,Romance",1978-01-01,0,0
+311,Kramer vs. Kramer,105,Drama,1979-01-01,1,0
+312,All That Jazz,123,"Comedy,Drama,Music",1979-01-01,0,0
+313,Apocalypse Now,147,"Drama,War",1979-01-01,0,0
+314,Breaking Away,101,"Comedy,Drama,Romance",1979-01-01,0,0
+315,Norma Rae,114,Drama,1979-01-01,0,0
+316,Ordinary People,124,Drama,1980-01-01,1,0
+317,Coal Miner's Daughter,124,"Biography,Drama,Music",1980-01-01,0,1
+318,The Elephant Man,124,"Biography,Drama",1980-01-01,0,1
+319,Raging Bull,129,"Biography,Drama,Sport",1980-01-01,0,1
+320,Tess,186,"Drama,Romance",1979-01-01,0,0
+321,Chariots of Fire,125,"Biography,Drama,Sport",1981-01-01,1,1
+322,Atlantic City,87,"Musical,Romance",1944-01-01,0,0
+323,On Golden Pond,109,Drama,1981-01-01,0,0
+324,Raiders of the Lost Ark,115,"Action,Adventure",1981-01-01,0,0
+325,Reds,195,"Biography,Drama,History",1981-01-01,0,1
+326,Gandhi,191,"Biography,Drama,History",1982-01-01,1,1
+327,E.T. The Extra-Terrestrial,115,"Family,Sci-Fi",1982-01-01,0,0
+328,Missing,122,"Biography,Drama,History",1982-01-01,0,1
+329,Tootsie,116,"Comedy,Drama,Romance",1982-01-01,0,0
+330,The Verdict,86,"Crime,Drama,Film-Noir",1946-01-01,0,0
+331,Terms of Endearment,132,"Comedy,Drama",1983-01-01,1,0
+332,The Big Chill,105,"Comedy,Drama",1983-01-01,0,0
+333,The Dresser,118,Drama,1983-01-01,0,0
+334,The Right Stuff,193,"Adventure,Biography,Drama",1983-01-01,0,1
+335,Tender Mercies,92,"Drama,Music",1983-01-01,0,0
+336,Amadeus,160,"Biography,Drama,History",1984-01-01,1,1
+337,The Killing Fields,141,"Biography,Drama,History",1984-01-01,0,1
+338,A Passage to India,164,"Adventure,Drama,History",1984-01-01,0,0
+339,Places in the Heart,111,Drama,1984-01-01,0,0
+340,A Soldier's Story,101,"Crime,Drama,Mystery",1984-01-01,0,0
+341,Out of Africa,161,"Biography,Drama,Romance",1985-01-01,1,1
+342,The Color Purple,154,Drama,1985-01-01,0,0
+343,Kiss of the Spider Woman,120,Drama,1985-01-01,0,0
+344,Prizzi's Honor,130,"Comedy,Crime,Drama",1985-01-01,0,0
+345,Witness,112,"Crime,Drama,Romance",1985-01-01,0,0
+346,Platoon,120,"Drama,War",1986-01-01,1,0
+347,Children of a Lesser God,119,"Drama,Romance",1986-01-01,0,0
+348,Hannah and Her Sisters,107,"Comedy,Drama",1986-01-01,0,0
+349,The Mission,103,Drama,1983-01-01,0,0
+350,A Room with a View,117,"Drama,Romance",1985-01-01,0,0
+351,The Last Emperor,163,"Biography,Drama,History",1987-01-01,1,1
+352,Broadcast News,133,"Comedy,Drama,Romance",1987-01-01,0,0
+353,Fatal Attraction,119,"Drama,Thriller",1987-01-01,0,0
+354,Hope and Glory,113,"Comedy,Drama,Romance",1987-01-01,0,0
+355,Moonstruck,102,"Comedy,Drama,Romance",1987-01-01,0,0
+356,Rain Man,133,Drama,1988-01-01,1,0
+357,The Accidental Tourist,121,"Drama,Romance",1988-01-01,0,0
+358,Dangerous Liaisons,119,"Drama,Romance",1988-01-01,0,0
+359,Mississippi Burning,128,"Crime,Drama,History",1988-01-01,0,0
+360,Working Girl,113,"Comedy,Drama,Romance",1988-01-01,0,0
+361,Driving Miss Daisy,99,Drama,1989-01-01,1,0
+362,Born on the Fourth of July,145,"Biography,Drama,War",1989-01-01,0,1
+363,Dead Poets Society,128,"Comedy,Drama",1989-01-01,0,0
+364,Field of Dreams,107,"Drama,Family,Fantasy",1989-01-01,0,0
+365,My Left Foot,103,"Biography,Drama",1989-01-01,0,1
+366,Dances with Wolves,181,"Adventure,Drama,Western",1990-01-01,1,0
+367,Awakenings,121,"Biography,Drama",1990-01-01,0,1
+368,Ghost,127,"Drama,Fantasy,Romance",1990-01-01,0,0
+369,The Godfather: Part III,162,"Crime,Drama",1990-01-01,0,0
+370,Goodfellas,146,"Crime,Drama",1990-01-01,0,0
+371,The Silence of the Lambs,118,"Crime,Drama,Thriller",1991-01-01,1,0
+372,Beauty and the Beast,96,"Drama,Fantasy,Romance",1946-01-01,0,0
+373,Bugsy,136,"Biography,Crime,Drama",1991-01-01,0,1
+374,JFK,189,"Drama,History,Thriller",1991-01-01,0,0
+375,The Prince of Tides,132,"Drama,Romance",1991-01-01,0,0
+376,Unforgiven,130,"Drama,Western",1992-01-01,1,0
+377,The Crying Game,112,"Crime,Drama,Romance",1992-01-01,0,0
+378,A Few Good Men,138,"Drama,Thriller",1992-01-01,0,0
+379,Howards End,142,"Drama,Romance",1992-01-01,0,0
+380,Scent of a Woman,103,"Comedy,Drama",1974-01-01,0,0
+381,Schindler's List,195,"Biography,Drama,History",1993-01-01,1,1
+382,The Fugitive,60,Western,1933-01-01,0,0
+383,In the Name of the Father,115,Drama,1971-01-01,0,0
+384,The Piano,121,"Drama,Music,Romance",1993-01-01,0,0
+385,The Remains of the Day,134,"Drama,Romance",1993-01-01,0,0
+386,Forrest Gump,142,"Drama,Romance",1994-01-01,1,0
+387,Four Weddings and a Funeral,117,"Comedy,Drama,Romance",1994-01-01,0,0
+388,Pulp Fiction,154,"Crime,Drama",1994-01-01,0,0
+389,Quiz Show,133,"Biography,Drama,History",1994-01-01,0,1
+390,The Shawshank Redemption,142,Drama,1994-01-01,0,0
+391,Braveheart,178,"Biography,Drama,History",1995-01-01,1,1
+392,Apollo 13,140,"Adventure,Drama,History",1995-01-01,0,0
+393,Babe,80,"Adult,Romance",1981-01-01,0,0
+394,Il Postino: The Postman,108,"Biography,Comedy,Drama",1994-01-01,0,1
+395,Sense and Sensibility,136,"Drama,Romance",1995-01-01,0,0
+396,The English Patient,162,"Drama,Romance,War",1996-01-01,1,0
+397,Fargo,69,"Action,Adventure,Western",1952-01-01,0,0
+398,Jerry Maguire,139,"Comedy,Drama,Romance",1996-01-01,0,0
+399,Secrets & Lies,136,Drama,1996-01-01,0,0
+400,Shine,105,"Biography,Drama,Music",1996-01-01,0,1
+401,Titanic,85,"Action,Drama,History",1943-01-01,1,0
+402,As Good as It Gets,139,"Comedy,Drama,Romance",1997-01-01,0,0
+403,The Full Monty,91,"Comedy,Drama",1997-01-01,0,0
+404,Good Will Hunting,126,"Drama,Romance",1997-01-01,0,0
+405,L.A. Confidential,138,"Crime,Drama,Mystery",1997-01-01,0,0
+406,Shakespeare in Love,123,"Comedy,Drama,History",1998-01-01,1,0
+407,Elizabeth,124,"Biography,Drama,History",1998-01-01,0,1
+408,Life Is Beautiful,96,Romance,1930-01-01,0,0
+409,Saving Private Ryan,169,"Drama,War",1998-01-01,0,0
+410,The Thin Red Line,99,"Drama,War",1964-01-01,0,0
+411,American Beauty,122,Drama,1999-01-01,1,0
+412,The Cider House Rules,126,"Drama,Romance",1999-01-01,0,0
+413,The Green Mile,189,"Crime,Drama,Fantasy",1999-01-01,0,0
+414,The Insider,157,"Biography,Drama,Thriller",1999-01-01,0,1
+415,The Sixth Sense,70,Drama,1929-01-01,0,0
+416,Gladiator,101,"Action,Drama,Sport",1992-01-01,1,0
+417,Chocolat,105,Drama,1988-01-01,0,0
+418,"Crouching Tiger, Hidden Dragon",120,"Action,Adventure,Fantasy",2000-01-01,0,0
+419,Erin Brockovich,131,"Biography,Drama",2000-01-01,0,1
+420,Traffic,147,"Crime,Drama,Thriller",2000-01-01,0,0
+421,A Beautiful Mind,135,"Biography,Drama",2001-01-01,1,1
+422,Gosford Park,131,"Comedy,Drama,Mystery",2001-01-01,0,0
+423,In the Bedroom,130,"Crime,Drama",2001-01-01,0,0
+424,The Lord of the Rings: The Fellowship of the Ring,178,"Adventure,Drama,Fantasy",2001-01-01,0,0
+425,Moulin Rouge!,127,"Drama,Musical,Romance",2001-01-01,0,0
+426,Chicago,118,"Comedy,Crime,Drama",1927-01-01,1,0
+427,Gangs of New York,67,"Crime,Drama",1938-01-01,0,0
+428,The Hours,110,"Drama,Romance",2002-01-01,0,0
+429,The Lord of the Rings: The Two Towers,179,"Adventure,Drama,Fantasy",2002-01-01,0,0
+430,The Pianist,112,Romance,1991-01-01,0,0
+431,The Lord of the Rings: The Return of the King,201,"Adventure,Drama,Fantasy",2003-01-01,1,0
+432,Lost in Translation,102,Drama,2003-01-01,0,0
+433,Master and Commander: The Far Side of the World,138,"Action,Adventure,Drama",2003-01-01,0,0
+434,Mystic River,138,"Crime,Drama,Mystery",2003-01-01,0,0
+435,Seabiscuit,140,"Drama,History,Sport",2003-01-01,0,0
+436,Million Dollar Baby,65,"Comedy,Drama,Music",1934-01-01,1,0
+437,The Aviator,75,Comedy,1929-01-01,0,0
+438,Finding Neverland,106,"Biography,Drama,Family",2004-01-01,0,1
+439,Ray,152,"Biography,Drama,Music",2004-01-01,0,1
+440,Sideways,127,"Comedy,Drama,Romance",2004-01-01,0,0
+441,Crash,90,Drama,1974-01-01,1,0
+442,Brokeback Mountain,134,"Drama,Romance",2005-01-01,0,0
+443,Capote,114,"Biography,Crime,Drama",2005-01-01,0,1
+444,"Good Night, and Good Luck.",93,"Biography,Drama,History",2005-01-01,0,1
+445,Munich,164,"Drama,History,Thriller",2005-01-01,0,0
+446,The Departed,151,"Crime,Drama,Thriller",2006-01-01,1,0
+447,Babel,95,"Adventure,Family,Fantasy",1999-01-01,0,0
+448,Letters from Iwo Jima,141,"Drama,History,War",2006-01-01,0,0
+449,Little Miss Sunshine,101,"Comedy,Drama",2006-01-01,0,0
+450,The Queen,68,Documentary,1968-01-01,0,0
+451,No Country for Old Men,122,"Crime,Drama,Thriller",2007-01-01,1,0
+452,Atonement,51,Documentary,1970-01-01,0,0
+453,Juno,96,"Comedy,Drama",2007-01-01,0,0
+454,Michael Clayton,119,"Crime,Drama,Mystery",2007-01-01,0,0
+455,There Will Be Blood,158,Drama,2007-01-01,0,0
+456,Slumdog Millionaire,120,"Drama,Romance",2008-01-01,0,0
+457,The Curious Case of Benjamin Button,166,"Drama,Fantasy,Romance",2008-01-01,0,0
+458,Frost/Nixon,122,"Biography,Drama,History",2008-01-01,0,1
+459,Milk,94,"Comedy,Drama",1999-01-01,0,0
+460,The Reader,124,"Drama,Romance",2008-01-01,0,0
+461,The Hurt Locker,131,"Drama,Thriller,War",2008-01-01,1,0
+462,Avatar,162,"Action,Adventure,Fantasy",2009-01-01,0,0
+463,The Blind Side,129,"Biography,Drama,Sport",2009-01-01,0,1
+464,District 9,112,"Sci-Fi,Thriller",2009-01-01,0,0
+465,An Education,100,Drama,2009-01-01,0,0
+466,Inglourious Basterds,153,"Adventure,Drama,War",2009-01-01,0,0
+467,Precious,110,Drama,2009-01-01,0,0
+468,A Serious Man,106,"Comedy,Drama",2009-01-01,0,0
+469,Up,96,"Adventure,Animation,Comedy",2009-01-01,0,0
+470,Up in the Air,62,"Action,Comedy,Music",1940-01-01,0,0
+471,The King's Speech,118,"Biography,Drama,History",2010-01-01,1,1
+472,127 Hours,94,"Adventure,Biography,Drama",2010-01-01,0,1
+473,Black Swan,90,"Comedy,Drama",2002-01-01,0,0
+474,The Fighter,116,"Biography,Drama,Sport",2010-01-01,0,1
+475,Inception,148,"Action,Adventure,Sci-Fi",2010-01-01,0,0
+476,The Kids Are All Right,106,"Comedy,Drama,Romance",2010-01-01,0,0
+477,The Social Network,120,"Biography,Drama",2010-01-01,0,1
+478,Toy Story 3,103,"Adventure,Animation,Comedy",2010-01-01,0,0
+479,True Grit,128,"Adventure,Drama,Western",1969-01-01,0,0
+480,Winter's Bone,100,"Drama,Mystery",2010-01-01,0,0
+481,The Artist,100,"Comedy,Drama",2008-01-01,1,0
+482,The Descendants,115,"Comedy,Drama",2011-01-01,0,0
+483,Extremely Loud & Incredibly Close,129,"Adventure,Drama,Mystery",2011-01-01,0,0
+484,The Help,146,Drama,2011-01-01,0,0
+485,Hugo,100,Documentary,1989-01-01,0,0
+486,Midnight in Paris,106,"Crime,Drama,Mystery",1942-01-01,0,0
+487,Moneyball,133,"Biography,Drama,Sport",2011-01-01,0,1
+488,The Tree of Life,75,\N,1998-01-01,0,0
+489,War Horse,146,"Drama,History,War",2011-01-01,0,0
+490,Argo,106,"Action,Comedy",2004-01-01,1,0
+491,Amour,127,"Drama,Romance",2012-01-01,0,0
+492,Beasts of the Southern Wild,93,"Adventure,Drama,Fantasy",2012-01-01,0,0
+493,Django Unchained,165,"Drama,Western",2012-01-01,0,0
+494,Life of Pi,127,"Adventure,Drama,Fantasy",2012-01-01,0,0
+495,Lincoln,150,"Biography,Drama,History",2012-01-01,0,1
+496,Silver Linings Playbook,122,"Comedy,Drama,Romance",2012-01-01,0,0
+497,Zero Dark Thirty,157,"Drama,Thriller",2012-01-01,0,0
+498,12 Years a Slave,134,"Biography,Drama,History",2013-01-01,1,1
+499,American Hustle,138,"Crime,Drama",2013-01-01,0,0
+500,Captain Phillips,134,"Biography,Drama,Thriller",2013-01-01,0,1
+501,Dallas Buyers Club,117,"Biography,Drama",2013-01-01,0,1
+502,Gravity,83,Drama,2004-01-01,0,0
+503,Her,45,Drama,2009-01-01,0,0
+504,Nebraska,88,Drama,2001-01-01,0,0
+505,Philomena,98,"Biography,Drama",2013-01-01,0,1
+506,The Wolf of Wall Street,180,"Biography,Comedy,Crime",2013-01-01,0,1
+507,Birdman or (The Unexpected Virtue of Ignorance),119,"Comedy,Drama",2014-01-01,1,0
+508,American Sniper,133,"Action,Biography,Drama",2014-01-01,0,1
+509,Boyhood,111,"Drama,War",1951-01-01,0,0
+510,The Grand Budapest Hotel,99,"Adventure,Comedy,Drama",2014-01-01,0,0
+511,The Imitation Game,114,"Biography,Drama,Thriller",2014-01-01,0,1
+512,Selma,128,"Biography,Drama,History",2014-01-01,0,1
+513,The Theory of Everything,123,"Biography,Drama,Romance",2014-01-01,0,1
+514,Whiplash,91,"Drama,Film-Noir,Sport",1948-01-01,0,0
+515,Spotlight,129,"Crime,Drama,History",2015-01-01,1,0
+516,The Big Short,130,"Biography,Comedy,Drama",2015-01-01,0,1
+517,Bridge of Spies,142,"Drama,History,Thriller",2015-01-01,0,0
+518,Brooklyn,117,"Drama,Romance",2015-01-01,0,0
+519,Mad Max: Fury Road,120,"Action,Adventure,Sci-Fi",2015-01-01,0,0
+520,The Martian,144,"Adventure,Drama,Sci-Fi",2015-01-01,0,0
+521,The Revenant,117,"Comedy,Fantasy,Horror",2009-01-01,0,0
+522,Room,75,"Drama,Mystery",2005-01-01,0,0
+523,Moonlight,91,Thriller,2002-01-01,1,0
+524,Arrival,116,"Drama,Mystery,Sci-Fi",2016-01-01,0,0
+525,Fences,139,Drama,2016-01-01,0,0
+526,Hacksaw Ridge,139,"Biography,Drama,History",2016-01-01,0,1
+527,Hell or High Water,102,"Action,Crime,Drama",2016-01-01,0,0
+528,Hidden Figures,127,"Biography,Drama,History",2016-01-01,0,1
+529,La La Land,128,"Comedy,Drama,Music",2016-01-01,0,0
+530,Lion,70,"Comedy,Drama,Romance",2015-01-01,0,0
+531,Manchester by the Sea,137,Drama,2016-01-01,0,0
+532,The Shape of Water,70,Documentary,2006-01-01,1,0
+533,Call Me by Your Name,132,"Drama,Romance",2017-01-01,0,0
+534,Darkest Hour,96,"Horror,Mystery",2005-01-01,0,0
+535,Dunkirk,135,"Action,Drama,History",1958-01-01,0,0
+536,Get Out,104,"Horror,Mystery,Thriller",2017-01-01,0,0
+537,Lady Bird,94,"Comedy,Drama",2017-01-01,0,0
+538,Phantom Thread,130,"Drama,Romance",2017-01-01,0,0
+539,The Post,55,Documentary,1999-01-01,0,0
+540,"Three Billboards Outside Ebbing, Missouri",115,"Comedy,Crime,Drama",2017-01-01,0,0
+541,Green Book,130,"Biography,Comedy,Drama",2018-01-01,0,1
+542,Black Panther,134,"Action,Adventure,Sci-Fi",2018-01-01,0,0
+543,BlacKkKlansman,135,"Biography,Crime,Drama",2018-01-01,0,1
+544,Bohemian Rhapsody,134,"Biography,Drama,Music",2018-01-01,0,1
+545,The Favourite,119,"Biography,Comedy,Drama",2018-01-01,0,1
+546,Roma,120,"Comedy,Drama",1972-01-01,0,0
+547,Vice,87,"Comedy,Drama",2000-01-01,0,0
+548,A Star Is Born,136,"Drama,Music,Romance",2018-01-01,0,0
+549,Romeo and Juliet,138,"Drama,Romance",1968-01-01,0,0
+550,Les Misérables,158,"Drama,History,Musical",2012-01-01,0,0
+551,Cleopatra,192,"Biography,Drama,History",1963-01-01,0,1
+552,Mutiny on the Bounty,178,"Adventure,Drama,History",1962-01-01,1,0
+553,Heaven Can Wait,101,"Comedy,Fantasy,Romance",1978-01-01,0,0

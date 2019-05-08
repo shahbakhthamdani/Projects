@@ -1,0 +1,772 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# 0. Importing the Libraries"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/home/luisarmandovillarreal/anaconda3/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.\n",
+      "  from ._conv import register_converters as _register_converters\n"
+     ]
+    }
+   ],
+   "source": [
+    "import os\n",
+    "import numpy as np\n",
+    "import pandas as pd\n",
+    "import matplotlib.pyplot as plt\n",
+    "import os, sys, re, json, time\n",
+    "import itertools, collections\n",
+    "from importlib import reload\n",
+    "from IPython.display import display\n",
+    "import scipy.sparse\n",
+    "import nltk\n",
+    "from w266_common import utils, vocabulary, tf_embed_viz"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# 1. Getting Tickers and Tweets"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "We have two different data folders ('data' and 'data2'). This is because we first got all the tweets that mentioned name of stock as per the convention $ (ticker). \n",
+    "\n",
+    "Afterwards we got tweets that include names of companies along with their ticker symbols in the tweets. For example, we gathered any tweet that mentioned Amazon, and any tweet that mention $ (AMZN). This substantially increased our tweet count.\n",
+    "\n",
+    "Our tweets dataset consist of tweets pertaining to S&P500 Top 50 companies only."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# getting all the files in folder 'data'\n",
+    "files = []\n",
+    "for file in os.listdir('data'):\n",
+    "    if file.endswith('.csv'):\n",
+    "        files.append(os.path.join('data', file))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# creating dataframe from files in 'data' folder\n",
+    "\n",
+    "data = []\n",
+    "\n",
+    "for filename in files:\n",
+    "    with open(filename, 'r') as file:\n",
+    "        ticker = filename.split('_')[-1][:-4]\n",
+    "        line = file.readline()\n",
+    "        line = file.readline()\n",
+    "        while(line):\n",
+    "            ts =line.split(';\"')[0][1:].split(';')[0]\n",
+    "            tweet = line.split(';\"')[1].split('\";')[0]\n",
+    "            tweet_id = line.split('/')[-1][:-1] \n",
+    "            line=file.readline()\n",
+    "            data.append([tweet_id,ticker,ts,tweet])\n",
+    "        \n",
+    "#df = pd.DataFrame(data, columns=['tweet_id','ticker','timestamp','tweet'])\n",
+    "#df"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# getting all the files in 'data2' folder\n",
+    "files1 = []\n",
+    "for file in os.listdir('data2'):\n",
+    "    if file.endswith('.csv'):\n",
+    "        files1.append(os.path.join('data2', file))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# creating dataframe for files in 'data2' folder\n",
+    "\n",
+    "\n",
+    "for filename in files1:\n",
+    "    with open(filename, 'r') as file:\n",
+    "        ticker = filename.split('_')[-1][:-4]\n",
+    "        line = file.readline()\n",
+    "        line = file.readline()\n",
+    "        while(line):\n",
+    "            ts =line.split(';\"')[0][1:].split(';')[0]\n",
+    "            tweet = line.split(';\"')[1].split('\";')[0]\n",
+    "            tweet_id = line.split('/')[-1][:-1] \n",
+    "            line=file.readline()\n",
+    "            data.append([tweet_id,ticker,ts,tweet])\n",
+    "        \n",
+    "df = pd.DataFrame(data, columns=['tweet_id','ticker','timestamp','tweet'])"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "As can be seen from shapes of dataframes below, our first dataframe has considerably less tweets than the second one."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "(3144677, 4)\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(df.shape)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>tweet_id</th>\n",
+       "      <th>ticker</th>\n",
+       "      <th>timestamp</th>\n",
+       "      <th>tweet</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>0</th>\n",
+       "      <td>1105569239845478401</td>\n",
+       "      <td>DWDP</td>\n",
+       "      <td>2019-03-12 20:40</td>\n",
+       "      <td>4 nice trades today 3 swings ($csco $ dwdp $ m...</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>1</th>\n",
+       "      <td>1105566065369722885</td>\n",
+       "      <td>DWDP</td>\n",
+       "      <td>2019-03-12 20:27</td>\n",
+       "      <td>$ AAPL - scaled out 2/3 into strength; 1/3 sto...</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2</th>\n",
+       "      <td>1105548846279450624</td>\n",
+       "      <td>DWDP</td>\n",
+       "      <td>2019-03-12 19:19</td>\n",
+       "      <td>SLD 100 $ DWDP @55.69</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>3</th>\n",
+       "      <td>1105548512119283713</td>\n",
+       "      <td>DWDP</td>\n",
+       "      <td>2019-03-12 19:18</td>\n",
+       "      <td>BOT $ DWDP Apr 55 call @2.34</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>4</th>\n",
+       "      <td>1105521484640980995</td>\n",
+       "      <td>DWDP</td>\n",
+       "      <td>2019-03-12 17:30</td>\n",
+       "      <td># estate asset watch - stocks with momentum, 5...</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "              tweet_id ticker         timestamp  \\\n",
+       "0  1105569239845478401   DWDP  2019-03-12 20:40   \n",
+       "1  1105566065369722885   DWDP  2019-03-12 20:27   \n",
+       "2  1105548846279450624   DWDP  2019-03-12 19:19   \n",
+       "3  1105548512119283713   DWDP  2019-03-12 19:18   \n",
+       "4  1105521484640980995   DWDP  2019-03-12 17:30   \n",
+       "\n",
+       "                                               tweet  \n",
+       "0  4 nice trades today 3 swings ($csco $ dwdp $ m...  \n",
+       "1  $ AAPL - scaled out 2/3 into strength; 1/3 sto...  \n",
+       "2                              SLD 100 $ DWDP @55.69  \n",
+       "3                       BOT $ DWDP Apr 55 call @2.34  \n",
+       "4  # estate asset watch - stocks with momentum, 5...  "
+      ]
+     },
+     "execution_count": 7,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "df.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "companies_dict = {'Union':'UNP', 'Disney':'DIS', 'Nike':'NKE', 'Chevron':'CVX',\n",
+    "                  'Intel':'INTC', 'Bank':'BAC', 'Pepsi':'PEP', 'Amgen':'AMGN',\n",
+    "                  'AT&T':'T', 'Procter':'PG', 'Microsoft':'MSFT', 'Wells':'WFG',\n",
+    "                  'Walmart':'WMT', 'Citigroup':'C', 'Verizon':'VZ', 'Exxon-Mobil':'XOM',\n",
+    "                  'Apple':'AAPL', 'Mastercard':'MA', 'Merck':'MRK', 'Boeing':'BA', \n",
+    "                  'Comcast':'CMCSA', 'Salesforce':'CRM', 'Home':'HD', 'Berkshire':'BRK',\n",
+    "                  'Cisco':'CSCO', 'ATT':'T', 'Dow':'DWDP', 'Coca-Cola':'KO', 'Visa':'V',\n",
+    "                  'Facebook':'FB', 'Johnson':'JNJ', 'Abbott':'ABBT', 'Broadcom':'AVGO',\n",
+    "                  '3M':'MMM', 'Pfizer':'PFE', 'Amazon':'AMZN', 'Honeywell':'HON', 'Adobe':'ADBE',\n",
+    "                  'Google':'GOOG', 'Netflix':'NFLX', 'Eli':'LLY', 'Phillips':'PM', 'United':'UNP',\n",
+    "                  'AbbVie':'ABBV', 'McDonald':'MCD', 'JP':'JPM', 'Paypal':'PYPL', 'Oracle':'ORCL', \n",
+    "                  'Medtronic':'MDT'}"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Associate tickers with company names\n",
+    "\n",
+    "for key, value in companies_dict.items():\n",
+    "    df.loc[df['ticker'] == key, 'ticker'] = value\n",
+    "    #combined_df.at[index, 'ticker'] = companies_dict[row['ticker']]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0"
+      ]
+     },
+     "execution_count": 11,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Get Nasdaq Stock Symbols\n",
+    "os.system(\"curl --ftp-ssl anonymous:jupi@jupi.com \"\n",
+    "          \"ftp://ftp.nasdaqtrader.com/SymbolDirectory/nasdaqlisted.txt \"\n",
+    "          \"> nasdaq.lst\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "<!DOCTYPE html><html data-adblockkey=\"MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANDrp2lz7AOmADaN8tA50LsWcjLFyQFcb/P2Txc58oYOeILb3vBw7J6f4pamkAQVSQuqYsKx3YzdUHCvbVZvFUsCAwEAAQ==_pxrolOu5yyzUS0zMNgm01mNbFq+3Njr33BJOzQ+JCg65FKwTyH/JswWy8wg/VocffrVzS1j7NXxyt+jJ2gFZsQ==\"><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"><title></title><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><meta name=\"description\" content=\"See related links to what you are looking for.\"/></head><!--[if IE 6 ]><body class=\"ie6\"><![endif]--><!--[if IE 7 ]><body class=\"ie7\"><![endif]--><!--[if IE 8 ]><body class=\"ie8\"><![endif]--><!--[if IE 9 ]><body class=\"ie9\"><![endif]--><!--[if (gt IE 9)|!(IE)]> --><body><!--<![endif]--><script type=\"text/javascript\">g_pb=(function(){var\n",
+      "DT=document,azy=location,DD=DT.createElement('script'),aAA=false,LU;DD.defer=true;DD.async=true;DD.src=\"//www.google.com/adsense/domains/caf.js\";DD.onerror=function(){if(azy.search!=='?z'){azy.href='/?z';}};DD.onload=DD.onreadystatechange=function(){if(!aAA&&LU){if(!window['googleNDT_']){}\n",
+      "LU(google.ads.domains.Caf);}\n",
+      "aAA=true;};DT.body.appendChild(DD);return{azl:function(n$){if(aAA)\n",
+      "n$(google.ads.domains.Caf);else\n",
+      "LU=n$;},bq:function(){if(!aAA){DT.body.removeChild(DD);}}};})();g_pd=(function(){var\n",
+      "azy=window.location,nw={},bH,azw=azy.search.substring(1),aAs,aAu;if(!azw)\n",
+      "return nw;aAs=azw.split(\"&\");for(bH=0;bH<aAs.length;bH++){aAu=aAs[bH].split('=');nw[aAu[0]]=aAu[1]?aAu[1]:\"\";}\n",
+      "return nw;})();g_pc=(function(){var $is_ABP_whitelisted=null;var $Image1=new Image;var $Image2=new Image;var $error1=false;var $error2=false;var $remaining=2;var $random=Math.random()*11;function $imageLoaded(){$remaining--;if($remaining===0)\n",
+      "$is_ABP_whitelisted=!$error1&&$error2;}\n",
+      "$Image1.onload=$Image2.onload=$imageLoaded;$Image1.onerror=function(){$error1=true;$imageLoaded();};$Image2.onerror=function(){$error2=true;$imageLoaded();};$Image1.src='/px.gif?ch=1&rn='+$random;$Image2.src='/px.gif?ch=2&rn='+$random;return{azo:function(){return'&abp='+($is_ABP_whitelisted?'1':'0');},$isWhitelisted:function(){return $is_ABP_whitelisted;},$onReady:function($callback){function $poll(){if($is_ABP_whitelisted===null)\n",
+      "setTimeout($poll,100);else $callback();}\n",
+      "$poll();}}})();(function(){var aAm=screen,Rr=window,azy=Rr.location,aAz=top.location,DT=document,Sf=DT.body||DT.getElementsByTagName('body')[0],aAx=0,aAv=0,aAw=0,$IE=null;if(Sf.className==='ie6')\n",
+      "$IE=6;else if(Sf.className==='ie7')\n",
+      "$IE=7;else if(Sf.className==='ie8')\n",
+      "$IE=8;else if(Sf.className==='ie9')\n",
+      "$IE=9;function aAt($callback){aAw++;aAx=Rr.innerWidth||DT.documentElement.clientWidth||Sf.clientWidth;aAv=Rr.innerHeight||DT.documentElement.clientHeight||Sf.clientHeight;if(aAx>0||aAw>=5){$callback();}\n",
+      "else{setTimeout(aAt,100);}}\n",
+      "var $num_requirements=2;function $requirementMet(){$num_requirements--;if($num_requirements===0)\n",
+      "aAy();}\n",
+      "aAt($requirementMet);g_pc.$onReady($requirementMet);function aAy(){var ef=undefined,IQ=encodeURIComponent,aAr;if(aAz!=azy&&g_pd.r_s===ef)\n",
+      "aAz.href=azy.href;aAr=DT.createElement('script');aAr.type='text/javascript';aAr.src='/glp'+'?r='+(g_pd.r!==ef?g_pd.r:(DT.referrer?IQ(DT.referrer.substr(0,255)):''))+\n",
+      "(g_pd.r_u?'&u='+g_pd.r_u:'&u='+IQ(azy.href.split('?')[0]))+\n",
+      "(g_pd.gc?'&gc='+g_pd.gc:'')+\n",
+      "(g_pd.cid?'&cid='+g_pd.cid:'')+\n",
+      "(g_pd.query?'&sq='+g_pd.query:'')+\n",
+      "(g_pd.search?'&ss=1':'')+\n",
+      "(g_pd.a!==ef?'&a':'')+\n",
+      "(g_pd.z!==ef?'&z':'')+\n",
+      "(g_pd.z_ds!==ef?'&z_ds':'')+\n",
+      "(g_pd.r_s!==ef?'&r_s='+g_pd.r_s:'')+\n",
+      "(g_pd.r_d!==ef?'&r_d='+g_pd.r_d:'')+'&rw='+aAm.width+'&rh='+aAm.height+\n",
+      "(g_pd.r_ww!==ef?'&ww='+g_pd.r_ww:'&ww='+aAx)+\n",
+      "(g_pd.r_wh!==ef?'&wh='+g_pd.r_wh:'&wh='+aAv)+\n",
+      "(g_pc.$isWhitelisted()?'&abp=1':'')+\n",
+      "($IE!==null?'&ie='+$IE:'')+\n",
+      "(g_pd.partner!==ef?'&partner='+g_pd.partner:'')+\n",
+      "(g_pd.subid1!==ef?'&subid1='+g_pd.subid1:'')+\n",
+      "(g_pd.subid2!==ef?'&subid2='+g_pd.subid2:'')+\n",
+      "(g_pd.subid3!==ef?'&subid3='+g_pd.subid3:'')+\n",
+      "(g_pd.subid4!==ef?'&subid4='+g_pd.subid4:'')+\n",
+      "(g_pd.subid5!==ef?'&subid5='+g_pd.subid5:'');Sf.appendChild(aAr);}})();</script></body></html>Symbol|Security Name|Market Category|Test Issue|Financial Status|Round Lot Size|ETF|NextShares\n",
+      "AABA|Altaba Inc. - Common Stock|Q|N|N|100|N|N\n"
+     ]
+    }
+   ],
+   "source": [
+    "!head -43 nasdaq.lst"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "ZSAN|Zosano Pharma Corporation - Common Stock|S|N|N|100|N|N\n",
+      "ZUMZ|Zumiez Inc. - Common Stock|Q|N|N|100|N|N\n",
+      "ZVZZC|NASDAQ TEST STOCK Nextshares Test Security|G|Y|N|100||Y\n",
+      "ZVZZT|NASDAQ TEST STOCK|G|Y|N|100||N\n",
+      "ZWZZT|NASDAQ TEST STOCK|S|Y|N|100||N\n",
+      "ZXYZ.A|Nasdaq Symbology Test Common Stock|Q|Y|N|100||N\n",
+      "ZXZZT|NASDAQ TEST STOCK|G|Y|N|100||N\n",
+      "ZYNE|Zynerba Pharmaceuticals, Inc. - Common Stock|G|N|N|100|N|N\n",
+      "ZYXI|Zynex, Inc. - Common Stock|S|N|N|100|N|N\n",
+      "File Creation Time: 0408201903:03|||||||\n"
+     ]
+    }
+   ],
+   "source": [
+    "!tail -10 nasdaq.lst"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "!tail -n +43 nasdaq.lst | cat | sed '$d' | sed 's/|/ /g' > nasdaq.lst2"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "AABA Altaba Inc. - Common Stock Q N N 100 N N\n",
+      "AAL American Airlines Group, Inc. - Common Stock Q N N 100 N N\n",
+      "AAME Atlantic American Corporation - Common Stock G N N 100 N N\n",
+      "AAOI Applied Optoelectronics, Inc. - Common Stock G N N 100 N N\n",
+      "AAON AAON, Inc. - Common Stock Q N N 100 N N\n",
+      "AAPL Apple Inc. - Common Stock Q N N 100 N N\n",
+      "AAWW Atlas Air Worldwide Holdings - Common Stock Q N N 100 N N\n",
+      "AAXJ iShares MSCI All Country Asia ex Japan Index Fund G N N 100 Y N\n",
+      "AAXN Axon Enterprise, Inc. - Common Stock Q N N 100 N N\n",
+      "ABCB Ameris Bancorp - Common Stock Q N N 100 N N\n",
+      "...\n",
+      "ZS Zscaler, Inc. - Common Stock Q N N 100 N N\n",
+      "ZSAN Zosano Pharma Corporation - Common Stock S N N 100 N N\n",
+      "ZUMZ Zumiez Inc. - Common Stock Q N N 100 N N\n",
+      "ZVZZC NASDAQ TEST STOCK Nextshares Test Security G Y N 100  Y\n",
+      "ZVZZT NASDAQ TEST STOCK G Y N 100  N\n",
+      "ZWZZT NASDAQ TEST STOCK S Y N 100  N\n",
+      "ZXYZ.A Nasdaq Symbology Test Common Stock Q Y N 100  N\n",
+      "ZXZZT NASDAQ TEST STOCK G Y N 100  N\n",
+      "ZYNE Zynerba Pharmaceuticals, Inc. - Common Stock G N N 100 N N\n",
+      "ZYXI Zynex, Inc. - Common Stock S N N 100 N N\n"
+     ]
+    }
+   ],
+   "source": [
+    "!echo; head nasdaq.lst2; echo \"...\"; tail nasdaq.lst2"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "!awk '{print $1}' nasdaq.lst2 > nasdaq.csv"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "tickers = pd.read_csv('nasdaq.csv', index_col=None, header=None)\n",
+    "tickers.columns = ['ticker']"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    " # Get NYSE Symbols\n",
+    "nyse = pd.read_csv('companylist.csv')\n",
+    "cols = [1,2,3,4,5,6,7,8,9]\n",
+    "nyse.drop(nyse.columns[cols],axis=1,inplace=True)\n",
+    "nyse.columns = ['ticker']\n",
+    "tickers = tickers.append(nyse)\n",
+    "tickers = list(tickers['ticker'])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Tweets associated with more than one stock: 542,968\n"
+     ]
+    },
+    {
+     "data": {
+      "text/plain": [
+       "(2601709, 4)"
+      ]
+     },
+     "execution_count": 12,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Get Tweets associated with more than one stock...\n",
+    "\n",
+    "# First, using the tweet id...\n",
+    "g = df.groupby('tweet_id').size().reset_index(name='count')\n",
+    "print('Tweets associated with more than one stock:',\"{:,}\".format(sum(g[g['count']>1]['count'])))\n",
+    "\n",
+    "# Delete those tweet ids\n",
+    "tweets_ids_to_drop = list(g[g['count']>1]['tweet_id'])\n",
+    "df = df[~df.tweet_id.isin(tweets_ids_to_drop)]\n",
+    "df.shape"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Loading vectors from data/glove/glove.6B.zip\n",
+      "Parsing file: data/glove/glove.6B.zip:glove.6B.100d.txt\n",
+      "Found 400,000 words.\n",
+      "Parsing vectors... Done! (W.shape = (400003, 100))\n"
+     ]
+    }
+   ],
+   "source": [
+    "# This one takes a while when run for the first time\n",
+    "\n",
+    "import glove_helper; reload(glove_helper)\n",
+    "\n",
+    "hands = glove_helper.Hands(ndim=100)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1158723"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "IOPub data rate exceeded.\n",
+      "The notebook server will temporarily stop sending output\n",
+      "to the client in order to avoid crashing it.\n",
+      "To change this limit, set the config variable\n",
+      "`--NotebookApp.iopub_data_rate_limit`.\n",
+      "\n",
+      "Current values:\n",
+      "NotebookApp.iopub_data_rate_limit=1000000.0 (bytes/sec)\n",
+      "NotebookApp.rate_limit_window=3.0 (secs)\n",
+      "\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "289535412868212182124"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "IOPub data rate exceeded.\n",
+      "The notebook server will temporarily stop sending output\n",
+      "to the client in order to avoid crashing it.\n",
+      "To change this limit, set the config variable\n",
+      "`--NotebookApp.iopub_data_rate_limit`.\n",
+      "\n",
+      "Current values:\n",
+      "NotebookApp.iopub_data_rate_limit=1000000.0 (bytes/sec)\n",
+      "NotebookApp.rate_limit_window=3.0 (secs)\n",
+      "\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "3144676\r"
+     ]
+    }
+   ],
+   "source": [
+    "# Second, discard tweets that mention multiple stocks\n",
+    "# This one takes a while, hang in there\n",
+    "# Take advantage of the whole iteration and transform tweet for classifier\n",
+    "df_duplicate = df.copy()\n",
+    "\n",
+    "indices_to_drop = []\n",
+    "\n",
+    "for row in df_duplicate.itertuples():\n",
+    "    if row[0]%1000==0:\n",
+    "        print(row[0],end='\\r')\n",
+    "\n",
+    "    tweet_no_url = re.sub(r'http\\S+', '', row[-1])\n",
+    "    tokens = tweet_no_url.split(' ')\n",
+    "    sentence = '<s> '\n",
+    "    flag = True\n",
+    "    prev_token = ''\n",
+    "    for token in tokens:\n",
+    "        try:\n",
+    "            a = hands.vocab.word_to_id[token.lower()]\n",
+    "            sentence = sentence + token.lower() + ' '\n",
+    "\n",
+    "        except:\n",
+    "            pass\n",
+    "\n",
+    "        if token in tickers and prev_token == '$':\n",
+    "\n",
+    "            if token != row[2]:\n",
+    "                indices_to_drop.append(row[0])\n",
+    "                flag=False\n",
+    "                break\n",
+    "        \n",
+    "        prev_token = token\n",
+    "    \n",
+    "    sentence += '</s>'\n",
+    "    \n",
+    "    if flag:\n",
+    "        \n",
+    "        df_duplicate.at[row[0],'tweet'] = re.sub('[^A-Za-z0-9 <>/]+', '', sentence)\n",
+    "\n",
+    "df_duplicate.drop(indices_to_drop, inplace=True)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df_duplicate.to_csv('data/clean_tweets.csv', index=False)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>tweet_id</th>\n",
+       "      <th>ticker</th>\n",
+       "      <th>timestamp</th>\n",
+       "      <th>tweet</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>24</th>\n",
+       "      <td>110526365952428032</td>\n",
+       "      <td>DWDP</td>\n",
+       "      <td>2019-03-12 00:26</td>\n",
+       "      <td>&lt;s&gt; traders sell shares of  on strength  &lt;/s&gt;</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>25</th>\n",
+       "      <td>1103805919568293888</td>\n",
+       "      <td>T</td>\n",
+       "      <td>2019-03-07 23:53</td>\n",
+       "      <td>&lt;s&gt;  ich   ich  &lt;/s&gt;</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>26</th>\n",
+       "      <td>1103801007375552514</td>\n",
+       "      <td>T</td>\n",
+       "      <td>2019-03-07 23:34</td>\n",
+       "      <td>&lt;s&gt;  house democrats seek details of trump eff...</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>56</th>\n",
+       "      <td>1103735736153432064</td>\n",
+       "      <td>T</td>\n",
+       "      <td>2019-03-07 19:14</td>\n",
+       "      <td>&lt;s&gt;  t  two new revenue streams    att   inves...</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>63</th>\n",
+       "      <td>1103724496027115520</td>\n",
+       "      <td>T</td>\n",
+       "      <td>2019-03-07 18:30</td>\n",
+       "      <td>&lt;s&gt; telus co declares quarterly dividend of  t...</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "               tweet_id ticker         timestamp  \\\n",
+       "24   110526365952428032   DWDP  2019-03-12 00:26   \n",
+       "25  1103805919568293888      T  2019-03-07 23:53   \n",
+       "26  1103801007375552514      T  2019-03-07 23:34   \n",
+       "56  1103735736153432064      T  2019-03-07 19:14   \n",
+       "63  1103724496027115520      T  2019-03-07 18:30   \n",
+       "\n",
+       "                                                tweet  \n",
+       "24      <s> traders sell shares of  on strength  </s>  \n",
+       "25                               <s>  ich   ich  </s>  \n",
+       "26  <s>  house democrats seek details of trump eff...  \n",
+       "56  <s>  t  two new revenue streams    att   inves...  \n",
+       "63  <s> telus co declares quarterly dividend of  t...  "
+      ]
+     },
+     "execution_count": 15,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "df_duplicate.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.6.5"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
