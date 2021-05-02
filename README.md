@@ -19,6 +19,7 @@ All the high-level results can be found in `README.md` pages of individual proje
 - **Predictive Analytics**:
   - [Determining the click-through rate on a large set of online advertising data using classification techniques.](https://github.com/shahbakhthamdani/Projects/tree/master/Data%20Science%20Projects/5.%20Click-Through%20Rate%20Prediction)
   - [Determining *bot* activity on an auction to delineate which bids were made by humans versus which bids were made by bots.](https://github.com/shahbakhthamdani/Projects/tree/master/Data%20Science%20Projects/6.%20Bot%20Detection%20Classifier)
+- **Computer Vision and Deep Learning**: Automated accident detection in CCTV footage to decrease medical help response time.
 
 ### Python Projects
 
