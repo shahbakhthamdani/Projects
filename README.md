@@ -10,9 +10,9 @@ All the high-level results can be found in `README.md` pages of individual proje
 
 ## Table of Contents
 
-### [Resume Link](https://github.com/shahbakhthamdani/Projects/blob/master/Resume.pdf)
+### 1. [Resume Link](https://github.com/shahbakhthamdani/Projects/raw/master/Resume.pdf)
 
-### Data Science Projects
+### 2. Data Science Projects
 
 - **Sentiment Analysis and Time Series Analysis**: [Using sentiment analysis of tweets to predict specific stocks' performance, based on historic data.](https://github.com/shahbakhthamdani/Projects/tree/master/Data%20Science%20Projects/1.%20Sentiment%20Analysis%20for%20Stocks'%20Performance)
 - **Data Cleaning and Exploratory Analysis**: [Exploring MIT's Observatory of Economic Complexity data for long-term EU trade trends.](https://github.com/shahbakhthamdani/Projects/tree/master/Data%20Science%20Projects/2.%20MIT's%20Observatory%20of%20Economic%20Complexity%20Analysis)
@@ -23,6 +23,6 @@ All the high-level results can be found in `README.md` pages of individual proje
   - [Determining *bot* activity on an auction to delineate which bids were made by humans versus which bids were made by bots.](https://github.com/shahbakhthamdani/Projects/tree/master/Data%20Science%20Projects/6.%20Bot%20Detection%20Classifier)
 - **Computer Vision and Deep Learning**: [Automated accident detection in CCTV footage to decrease medical help response time.](https://github.com/shahbakhthamdani/Projects/tree/master/Data%20Science%20Projects/7.%20Hawkai%20Accident%20Detection%20Using%20Deep%20Learning)
 
-### Python Projects
+### 3. Python Projects
 
 - **Objected Oriented Programming**: [A simplified version of *Texas Hold 'em* implemented completely in Python using classes and functions.](https://github.com/shahbakhthamdani/Projects/tree/master/Python%20Projects/1.%20Simplified%20Texas%20Hold%20'em)
