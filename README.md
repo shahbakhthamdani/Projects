@@ -8,7 +8,9 @@ Some of these were individual, but most were group based. These projects cover a
 
 All the high-level results can be found in `README.md` pages of individual projects, and project report plus underlying code is available within the folder.
 
-## Links to Projects
+## Table of Contents
+
+### Resume Link
 
 ### Data Science Projects
 
