@@ -10,7 +10,7 @@ All the high-level results can be found in `README.md` pages of individual proje
 
 ## Table of Contents
 
-### 1. [Resume Link](https://github.com/shahbakhthamdani/Projects/raw/master/Resume.pdf)
+### 1. [Resume Link](https://github.com/shahbakhthamdani/Projects/raw/master/Shahbakht%20Hamdani%20Resume.pdf)
 
 ### 2. Data Science Projects
 
