@@ -1,5 +1,12 @@
 # Causal Analysis between Public and Market Sentiment: a Predictive Model for Individual Stock Performance
 
+## Topics Covered
+
+- Natural Language Processing (NLP), Sentiment Analysis
+- Causality Analysis
+- Timeseries Analysis
+- Predictive Modelling
+
 ## 0. Links
 
 [Project Paper](https://github.com/shahbakhthamdani/Projects/blob/master/Data%20Science%20Projects/1.%20Sentiment%20Analysis%20for%20Stocks'%20Performance/Twitter%20Sentiment%20and%20Stock%20Market%20Behaviour.pdf)

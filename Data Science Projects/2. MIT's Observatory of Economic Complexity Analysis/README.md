@@ -1,5 +1,12 @@
 # MIT's Observatory of Economic Complexity Analysis
 
+## Topics Covered
+
+- Data Cleaning and Transformation
+- Exploratory Data Analysis
+- Data Visualization
+- Telling stories with data
+
 ## 0. Links
 
 [Project Report](https://github.com/shahbakhthamdani/Projects/blob/master/Data%20Science%20Projects/2.%20MIT's%20Observatory%20of%20Economic%20Complexity%20Analysis/Analysis%20of%20MIT%E2%80%99s%20Observatory%20of%20Economic%20Complexity.pdf)
