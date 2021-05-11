@@ -3,8 +3,11 @@
 ## 0. Links
 
 [Project Paper](https://github.com/shahbakhthamdani/Projects/blob/master/Data%20Science%20Projects/1.%20Sentiment%20Analysis%20for%20Stocks'%20Performance/Twitter%20Sentiment%20and%20Stock%20Market%20Behaviour.pdf)
+
 [Data Profiling Notebook](https://github.com/shahbakhthamdani/Projects/blob/master/Data%20Science%20Projects/1.%20Sentiment%20Analysis%20for%20Stocks'%20Performance/Data_Profiling.ipynb)
+
 [Predictive Neural Network Model Notebook](https://github.com/shahbakhthamdani/Projects/blob/master/Data%20Science%20Projects/1.%20Sentiment%20Analysis%20for%20Stocks'%20Performance/Neural_Network_Model.ipynb)
+
 [Sentiment Classifier Notebook](https://github.com/shahbakhthamdani/Projects/blob/master/Data%20Science%20Projects/1.%20Sentiment%20Analysis%20for%20Stocks'%20Performance/Sentiment_Classifier_Model.ipynb)
 
 ## 1. Overview
