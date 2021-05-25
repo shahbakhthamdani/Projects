@@ -2,7 +2,9 @@
 
 ## Introduction
 
-This repository contains projects that I worked on as part of University of California, Berkeley's MIDS (The Master of Information and Data Science) program [MIDS Homepage](https://ischoolonline.berkeley.edu/data-science/).
+This repository contains data science and machine learning projects that I worked on as part of **University of California, Berkeley's MIDS (The Master of Information and Data Science)** program.
+
+Link to [MIDS Homepage](https://ischoolonline.berkeley.edu/data-science/).
 
 These projects cover a range of topics such as:
 
@@ -12,13 +14,13 @@ These projects cover a range of topics such as:
 - predictive analytics,
 - computer vision.
 
-All the high-level results and summaries can be found in `README.md` pages of individual project folders, and reports plus underlying code is available as well.
+All high-level results and summaries can be found in `README.md` pages of individual project folders, along with full reports and underlying code.
 
-Please use table of contents below for quick navigation.
+Please use the *table of contents* below for quick navigation.
 
 ## Table of Contents
 
-### 1. [Resume Link](https://github.com/shahbakhthamdani/Projects/raw/master/Shahbakht%20Hamdani%20Resume.pdf)
+### 1. [Download Resume](https://github.com/shahbakhthamdani/Projects/raw/master/Shahbakht%20Hamdani%20Resume.pdf)
 
 ### 2. [LinkedIn Profile](https://www.linkedin.com/in/shahbakht-hamdani/)
 
