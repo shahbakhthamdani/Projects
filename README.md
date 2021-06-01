@@ -2,7 +2,7 @@
 
 ![MS Azure Data Science Associate Credential](images/microsoft-certified-azure-data-scientist-associate.png?raw=true)
 
-[Microsoft Certified: Azure Data Scientist Associate Credential link](https://www.credly.com/badges/0abcdec0-fb08-462f-9b24-c144b5237a3f/public_url)
+[Microsoft Certified: Azure Data Scientist Associate Credential](https://www.credly.com/badges/0abcdec0-fb08-462f-9b24-c144b5237a3f/public_url)
 
 ## Introduction
 
