@@ -30,13 +30,21 @@ Please use the *table of contents* below for quick navigation.
 
 ### 3. Data Science Projects
 
-- **Sentiment Analysis and Time Series Analysis**: [Using sentiment analysis of tweets to predict specific stocks' performance, based on historic data.](https://github.com/shahbakhthamdani/Projects/tree/master/Data%20Science%20Projects/1.%20Sentiment%20Analysis%20for%20Stocks'%20Performance)
+#### Statistical Inference & Exploratory Data Analysis
+
 - **Data Cleaning and Exploratory Analysis**: [Exploring MIT's Observatory of Economic Complexity data for long-term EU trade trends.](https://github.com/shahbakhthamdani/Projects/tree/master/Data%20Science%20Projects/2.%20MIT's%20Observatory%20of%20Economic%20Complexity%20Analysis)
 - **Statistical Inference and Exploratory Analysis**: [Conducting causality and regression analysis of crime stats for North Carolina.](https://github.com/shahbakhthamdani/Projects/tree/master/Data%20Science%20Projects/3.%20Crime%20Rate%20Regression%20Analysis)
 - **Experiment Design and Statistical Inference**: [Designing experiment, collecting data and conducting statistical inference to determine causal relationship between stress measures and watching "stress reducing" clips.](https://github.com/shahbakhthamdani/Projects/tree/master/Data%20Science%20Projects/4.%20Causality%20Analysis%20of%20Stress-reducing%20videos)
+
+#### Machine Learning
+
 - **Predictive Analytics**:
   - [Determining click-through rate of a large set of online advertising data using classification techniques.](https://github.com/shahbakhthamdani/Projects/tree/master/Data%20Science%20Projects/5.%20Click-Through%20Rate%20Prediction)
   - [Determining *bot* activity on an auction to delineate which bids were made by humans versus which bids were made by bots.](https://github.com/shahbakhthamdani/Projects/tree/master/Data%20Science%20Projects/6.%20Bot%20Detection%20Classifier)
+- **Sentiment Analysis and Time Series Analysis**: [Using sentiment analysis of tweets to predict specific stocks' performance, based on historic data.](https://github.com/shahbakhthamdani/Projects/tree/master/Data%20Science%20Projects/1.%20Sentiment%20Analysis%20for%20Stocks'%20Performance)
+
+##### Deep Learning
+
 - **Computer Vision and Deep Learning**: [Automated accident detection in CCTV footage to decrease medical help response time.](https://github.com/shahbakhthamdani/Projects/tree/master/Data%20Science%20Projects/7.%20Hawkai%20Accident%20Detection%20Using%20Deep%20Learning)
 
 ### 4. Python Projects
