@@ -1,5 +1,7 @@
 # Data Science Portfolio
 
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="0abcdec0-fb08-462f-9b24-c144b5237a3f" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>'
+
 ## Introduction
 
 This repository contains data science and machine learning projects that I worked on as part of **University of California, Berkeley's MIDS (The Master of Information and Data Science)** program.
