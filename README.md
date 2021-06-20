@@ -1,9 +1,10 @@
 # Data Science Portfolio
 
-![[MS Azure Data Science Associate Credential](https://www.credly.com/badges/0abcdec0-fb08-462f-9b24-c144b5237a3f/public_url)](images/microsoft-certified-azure-data-scientist-associate.png?raw=true)
-![[Tableau Desktop Certified Associate](https://www.credly.com/badges/c70c4bb5-0c7e-4ba3-9b9a-072f8451b6dd/public_url)](images/tableau-desktop-certified-associate.png?raw=true)
+![MS Azure Data Science Associate Credential](images/microsoft-certified-azure-data-scientist-associate.png?raw=true)
+![Tableau Desktop Certified Associate](images/tableau-desktop-certified-associate.png?raw=true)
 
 [Microsoft Certified: Azure Data Scientist Associate Credential](https://www.credly.com/badges/0abcdec0-fb08-462f-9b24-c144b5237a3f/public_url)
+
 [Tableau Desktop Certified Associate](https://www.credly.com/badges/c70c4bb5-0c7e-4ba3-9b9a-072f8451b6dd/public_url)
 
 ## Introduction
